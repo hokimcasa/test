@@ -25,6 +25,7 @@ export class HeroService{
 
    getHero(id:number):Promise<Hero>{
        const url=`${this.heroesUrl}/${id}`;
+       let a;
        return this.http.get(url)
                   .toPromise()
                   .then(response => response.json().data as Hero)
