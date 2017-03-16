@@ -10,8 +10,8 @@ import {InMemoryDataService}   from './in-memory-data.service'
 
 import {AppComponent}           from './app.component';
 import {DashboardComponent}     from './dashboard.component';
-import {HeroDetailComponent}    from './hero-detail.component';
 import {HeroesComponent}        from './heroes.component';
+import {HeroDetailComponent}    from './hero-detail.component';
 import {HeroService}            from './hero.service';
 
 
@@ -21,9 +21,10 @@ import {HeroService}            from './hero.service';
     imports:[
         BrowserModule,
         FormsModule,
-        AppRoutingModule,
+        HttpModule,
         InMemoryWebApiModule.forRoot(InMemoryDataService),
-        HttpModule
+        AppRoutingModule
+        
     ],
     declarations:[
         AppComponent,
